@@ -1,0 +1,22 @@
+{
+    "name": "Tilia.Locomotors.Climbing.Unity.Runtime",
+    "references": [
+        "Zinnia.Runtime",
+        "Tilia.Trackers.PseudoBody.Unity.Runtime",
+        "Tilia.Interactions.Interactables.Unity.Runtime"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "Malimbe.BehaviourStateRequirementMethod.dll",
+        "Malimbe.MemberChangeMethod.dll",
+        "Malimbe.MemberClearanceMethod.dll",
+        "Malimbe.PropertySerializationAttribute.dll",
+        "Malimbe.XmlDocumentationAttribute.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": []
+}

@@ -1,20 +1,22 @@
 {
-    "name": "io.extendreality.tilia.{scope}.{feature}.{platform?}",
-    "displayName": "Tilia {scope}.{feature}.{platform?}",
-    "description": "{Description of feature.}",
+    "name": "io.extendreality.tilia.locomotors.climbing.unity",
+    "displayName": "Tilia Locomotors Climbing Unity",
+    "description": "A mechanism that simulates climbing in a spatial environment for the Unity software.",
     "version": "1.0.0",
     "unity": "2018.3",
     "unityRelease": "10f1",
     "keywords": [
-        "pattern"
+        "locomotion",
+        "climb",
+        "climbing"
     ],
-    "homepage": "https://github.com/ExtendRealityLtd/Tilia.{scope}.{feature}.{platform?}/",
+    "homepage": "https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/",
     "bugs": {
-        "url": "https://github.com/ExtendRealityLtd/Tilia.{scope}.{feature}.{platform?}/issues"
+        "url": "https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/issues"
     },
     "repository": {
         "type": "git",
-        "url": "ssh://git@github.com/ExtendRealityLtd/Tilia.{scope}.{feature}.{platform?}.git"
+        "url": "ssh://git@github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity.git"
     },
     "license": "MIT",
     "author": {
@@ -23,7 +25,9 @@
         "url": "https://github.com/ExtendRealityLtd"
     },
     "dependencies": {
-        "io.extendreality.zinnia.unity": "X.Y.Z"
+        "io.extendreality.zinnia.unity": "1.14.1",
+        "io.extendreality.tilia.trackers.pseudobody.unity": "1.0.1",
+        "io.extendreality.tilia.interactions.interactables.unity": "1.6.0"
     },
     "files": [
         "*.md",
