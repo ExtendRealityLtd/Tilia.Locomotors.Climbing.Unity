@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2157e287d17f1224d975060d2f815cd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  source: {fileID: 0}
   Extracted:
     m_PersistentCalls:
       m_Calls:
@@ -58,8 +59,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: Zinnia.Data.Operation.Extraction.GameObjectExtractor+UnityEvent, Zinnia.Runtime,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_TypeName: Zinnia.Data.Operation.Extraction.ComponentGameObjectExtractor+UnityEvent,
+      Zinnia.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  Failed:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &2432646327186499937
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,6 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2157e287d17f1224d975060d2f815cd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  source: {fileID: 0}
   Extracted:
     m_PersistentCalls:
       m_Calls:
@@ -137,8 +144,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: Zinnia.Data.Operation.Extraction.GameObjectExtractor+UnityEvent, Zinnia.Runtime,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_TypeName: Zinnia.Data.Operation.Extraction.ComponentGameObjectExtractor+UnityEvent,
+      Zinnia.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  Failed:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &6058070890655214156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -583,16 +595,26 @@ PrefabInstance:
         type: 3}
       propertyPath: Untouched.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 6895961062708565633}
+      objectReference: {fileID: 1060462021325912104}
     - target: {fileID: 785982709505707726, guid: 1bb7642ebf8d0a34aa23fc586ea87e6a,
         type: 3}
       propertyPath: Untouched.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: DoExtractAttachPoint
+      value: DoExtract
       objectReference: {fileID: 0}
     - target: {fileID: 785982709505707726, guid: 1bb7642ebf8d0a34aa23fc586ea87e6a,
         type: 3}
       propertyPath: Untouched.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8862883227734677280, guid: 1bb7642ebf8d0a34aa23fc586ea87e6a,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8862883227734677280, guid: 1bb7642ebf8d0a34aa23fc586ea87e6a,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3648960081298957348, guid: 1bb7642ebf8d0a34aa23fc586ea87e6a,
         type: 3}
@@ -604,16 +626,6 @@ PrefabInstance:
       propertyPath: secondaryAction
       value: 
       objectReference: {fileID: 8889390888221751804}
-    - target: {fileID: 8862883227734677280, guid: 1bb7642ebf8d0a34aa23fc586ea87e6a,
-        type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8862883227734677280, guid: 1bb7642ebf8d0a34aa23fc586ea87e6a,
-        type: 3}
-      propertyPath: m_IsKinematic
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bb7642ebf8d0a34aa23fc586ea87e6a, type: 3}
 --- !u!4 &5295643782495264970 stripped
@@ -640,16 +652,16 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 4122333981180146150}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6895961062708565633 stripped
+--- !u!114 &1060462021325912104 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7387619618735056743, guid: 1bb7642ebf8d0a34aa23fc586ea87e6a,
+  m_CorrespondingSourceObject: {fileID: 4000037032040581582, guid: 1bb7642ebf8d0a34aa23fc586ea87e6a,
     type: 3}
   m_PrefabInstance: {fileID: 4122333981180146150}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 357323004877232305}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2157e287d17f1224d975060d2f815cd7, type: 3}
+  m_Script: {fileID: 11500000, guid: 13042f90e16b7fa449a4e044e1fedb54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &8231987192740050545 stripped
