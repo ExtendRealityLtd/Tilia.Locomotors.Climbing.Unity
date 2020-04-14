@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.1.0](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/compare/v1.0.2...v1.1.0) (2020-04-14)
+
+#### Features
+
+* **Interactions:** update interactor attach point extraction ([9d3ff74](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/commit/9d3ff740c93ae1f707a4aba30a4141d360d7dc28))
+  > Tilia.Interactions.Interactables.Unity 1.7.0 includes a new extractor for extracting the Interactor Attach Point and the old method has been deprecated.
+  > 
+  > The new InteractorAttachPointExtractor is now being used in the Climbable prefab.
+  > 
+  > All dependencies have also been bumped to their latest version for full compatibility.
+
 ### [1.0.2](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/compare/v1.0.1...v1.0.2) (2020-04-08)
 
 #### Miscellaneous Chores
