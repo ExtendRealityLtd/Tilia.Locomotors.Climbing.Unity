@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.1.18](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/compare/v1.1.17...v1.1.18) (2020-06-27)
+
+#### Bug Fixes
+
+* **Interactables:** update Interactables namespace to latest ([c4d956e](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/commit/c4d956ebba917e6f1490376ac6745ca945ae3fb4))
+  > The Interactables namespace changed in version 1.9.0 of the Interactables package, so it has been updated accordingly.
+
 ### [1.1.17](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/compare/v1.1.16...v1.1.17) (2020-06-21)
 
 #### Miscellaneous Chores
