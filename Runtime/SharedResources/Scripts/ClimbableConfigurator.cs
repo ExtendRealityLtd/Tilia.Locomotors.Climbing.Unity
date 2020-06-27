@@ -2,7 +2,7 @@
 {
     using Malimbe.PropertySerializationAttribute;
     using Malimbe.XmlDocumentationAttribute;
-    using Tilia.Interactions.Interactables;
+    using Tilia.Interactions.Interactables.Interactables;
     using UnityEngine;
     using Zinnia.Data.Attribute;
     using Zinnia.Event.Proxy;
