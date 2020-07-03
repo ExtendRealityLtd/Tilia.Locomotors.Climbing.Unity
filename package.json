@@ -35,6 +35,7 @@
         "*.asmdef",
         "*.xml",
         "Documentation",
-        "Runtime"
+        "Runtime",
+        "docfx.json"
     ]
 }
