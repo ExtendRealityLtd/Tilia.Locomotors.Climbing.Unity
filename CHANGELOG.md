@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.2.0](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/compare/v1.1.18...v1.2.0) (2020-07-03)
+
+#### Features
+
+* **API:** add auto-generated API documentation ([cd8fd85](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/commit/cd8fd8574d5188b94ad2476a5a81458df38b7055))
+  > The API documentation is auto generated with docfx and converted to markdown via turndown in a custom nodejs script.
+
+#### Bug Fixes
+
+* **package.json:** add docfx.json file ([dc6b0df](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/commit/dc6b0df54ba3a5e425d0251c14ed889555e4488a))
+  > The docfx.json file was missing from the package.json causing the build process to fail. It has now been added.
+
 ### [1.1.18](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/compare/v1.1.17...v1.1.18) (2020-06-27)
 
 #### Bug Fixes
