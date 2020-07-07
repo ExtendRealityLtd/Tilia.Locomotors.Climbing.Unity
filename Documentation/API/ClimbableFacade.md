@@ -11,6 +11,10 @@ The public interface for the Interactions.Climbable prefab.
   * [ClimbingFacade]
   * [Configuration]
   * [ReleaseMultiplier]
+* [Methods]
+  * [SetReleaseMultiplierX(Single)]
+  * [SetReleaseMultiplierY(Single)]
+  * [SetReleaseMultiplierZ(Single)]
 
 ## Details
 
@@ -61,10 +65,63 @@ The multiplier to apply to the velocity of the interactor when the interactable 
 public Vector3 ReleaseMultiplier { get; set; }
 ```
 
+### Methods
+
+#### SetReleaseMultiplierX(Single)
+
+Sets the [ReleaseMultiplier] x value.
+
+##### Declaration
+
+```
+public virtual void SetReleaseMultiplierX(float value)
+```
+
+##### Parameters
+
+| Type | Name | Description |
+| --- | --- | --- |
+| System.Single | value | The value to set to. |
+
+#### SetReleaseMultiplierY(Single)
+
+Sets the [ReleaseMultiplier] y value.
+
+##### Declaration
+
+```
+public virtual void SetReleaseMultiplierY(float value)
+```
+
+##### Parameters
+
+| Type | Name | Description |
+| --- | --- | --- |
+| System.Single | value | The value to set to. |
+
+#### SetReleaseMultiplierZ(Single)
+
+Sets the [ReleaseMultiplier] z value.
+
+##### Declaration
+
+```
+public virtual void SetReleaseMultiplierZ(float value)
+```
+
+##### Parameters
+
+| Type | Name | Description |
+| --- | --- | --- |
+| System.Single | value | The value to set to. |
+
 [Tilia.Locomotors.Climbing]: README.md
 [ClimbingFacade]: ClimbableFacade.md#ClimbingFacade
 [ClimbingFacade]: ClimbingFacade.md
 [ClimbableConfigurator]: ClimbableConfigurator.md
+[ReleaseMultiplier]: ClimbableFacade.md#ReleaseMultiplier
+[ReleaseMultiplier]: ClimbableFacade.md#ReleaseMultiplier
+[ReleaseMultiplier]: ClimbableFacade.md#ReleaseMultiplier
 [Inheritance]: #Inheritance
 [Namespace]: #Namespace
 [Syntax]: #Syntax
@@ -72,3 +129,7 @@ public Vector3 ReleaseMultiplier { get; set; }
 [ClimbingFacade]: #ClimbingFacade
 [Configuration]: #Configuration
 [ReleaseMultiplier]: #ReleaseMultiplier
+[Methods]: #Methods
+[SetReleaseMultiplierX(Single)]: #SetReleaseMultiplierXSingle
+[SetReleaseMultiplierY(Single)]: #SetReleaseMultiplierYSingle
+[SetReleaseMultiplierZ(Single)]: #SetReleaseMultiplierZSingle
