@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.3.0](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/compare/v1.2.7...v1.3.0) (2020-07-07)
+
+#### Features
+
+* **ClimbableFacade:** change release multiplier by UnityEvent ([97309de](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/commit/97309de149ab3361bc1de919f2486e6c9fb33e05))
+  > The ReleaseMultiplier can now be changed by UnityEvents by calling the relevant component set method:
+  > 
+  > * SetReleaseMultiplierX * SetReleaseMultiplierY * SetReleaseMultiplierZ
+  > 
+  > As these just take a float then it will show up in the UnityEvent inspector window.
+
 ### [1.2.7](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/compare/v1.2.6...v1.2.7) (2020-07-07)
 
 #### Miscellaneous Chores
