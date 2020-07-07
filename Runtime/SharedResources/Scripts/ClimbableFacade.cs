@@ -33,5 +33,32 @@
         [field: Header("Reference Settings"), DocumentedByXml, Restricted]
         public ClimbableConfigurator Configuration { get; protected set; }
         #endregion
+
+        /// <summary>
+        /// Sets the <see cref="ReleaseMultiplier"/> x value.
+        /// </summary>
+        /// <param name="value">The value to set to.</param>
+        public virtual void SetReleaseMultiplierX(float value)
+        {
+            ReleaseMultiplier = new Vector3(value, ReleaseMultiplier.y, ReleaseMultiplier.z);
+        }
+
+        /// <summary>
+        /// Sets the <see cref="ReleaseMultiplier"/> y value.
+        /// </summary>
+        /// <param name="value">The value to set to.</param>
+        public virtual void SetReleaseMultiplierY(float value)
+        {
+            ReleaseMultiplier = new Vector3(ReleaseMultiplier.x, value, ReleaseMultiplier.z);
+        }
+
+        /// <summary>
+        /// Sets the <see cref="ReleaseMultiplier"/> z value.
+        /// </summary>
+        /// <param name="value">The value to set to.</param>
+        public virtual void SetReleaseMultiplierZ(float value)
+        {
+            ReleaseMultiplier = new Vector3(ReleaseMultiplier.x, ReleaseMultiplier.y, value);
+        }
     }
 }
