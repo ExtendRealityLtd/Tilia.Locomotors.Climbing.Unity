@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/compare/v1.3.13...v1.4.0) (2020-08-14)
+
+#### Features
+
+* **Prefabs:** set the climbable interactable as specialgrab ([9412e3b](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/commit/9412e3bae64e680a064c39fff0760927bfcff208))
+  > The climbable Interactable now has a StringObservableList with the term `specialgrab` in the list that can be used by other elements to know the climbable Interactable is of a special generic type.
+
 ### [1.3.13](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/compare/v1.3.12...v1.3.13) (2020-08-14)
 
 #### Miscellaneous Chores
