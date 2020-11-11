@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.4.17](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/compare/v1.4.16...v1.4.17) (2020-11-11)
+
+#### Bug Fixes
+
+* **Climbing:** use specific climb action to prevent null error ([8566ba2](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/commit/8566ba2295626f2723c87cb7abce5b1ab4a57ef2))
+  > A recent change in the Interactables introduced a new null Action for grab types that yield no output. The climbing interactable would use this null action, but this is really not appropriate as the climb action yields a result so a new climb action has been added that is still the same in structure as the null action but it now allows the code to differentiate that this action is actually doing something.
+
 ### [1.4.16](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/compare/v1.4.15...v1.4.16) (2020-11-10)
 
 #### Miscellaneous Chores
