@@ -8,7 +8,7 @@
 
 ## Introduction
 
-The ability to climb up objects is a fun and freeing locomotion in virtual reality and this mechanic can be easily created using a customised interactable prefab to handle the climbing action along with the pseudo body prefab to handle the physics of the user's body.
+The ability to climb up objects is a fun and freeing locomotion in virtual reality and this mechanic can be easily created using a customized interactable prefab to handle the climbing action along with the pseudo body prefab to handle the physics of the user's body.
 
 ## Prerequisites
 
@@ -28,7 +28,7 @@ First off, make sure you start with the [Adding A PseudoBody] guide to be sure y
 
 We're now ready to set up the required prefabs for climbing. First off we need to add the climbing controller that communicates with the PseudoBody.
 
-Expand the `Tilia Locomotors Climbing Unity` Package directory in the Unity Project window and select the `Packages -> Tilia Locomotors Climbing Unity -> Runtime -> Prefabs` directory then drag and drop the `Locomotors.Climbing` prefab into the Unity hierarchy window.
+Expand the `Tilia Locomotors Climbing Unity` package directory in the Unity Project window and select the `Packages -> Tilia Locomotors Climbing Unity -> Runtime -> Prefabs` directory then drag and drop the `Locomotors.Climbing` prefab into the Unity Hierarchy window.
 
 ![Adding Climbing Prefab To Scene](assets/images/AddingClimbingPrefabToScene.png)
 
@@ -44,15 +44,15 @@ Drag and drop the `Trackers.PseudoBody` GameObject into the `Pseudo Body Facade`
 
 Next is to add a special interactable object that can be grabbed by an interactor but will work as the basis of our climbable object.
 
-Expand the `Tilia Locomotors Climbing Unity` Package directory in the Unity Project window and select the `Packages -> Tilia Locomotors Climbing Unity -> Runtime -> Prefabs` directory then drag and drop the `Interactions.Climbable` prefab into the Unity hierarchy window.
+Expand the `Tilia Locomotors Climbing Unity` package directory in the Unity Project window and select the `Packages -> Tilia Locomotors Climbing Unity -> Runtime -> Prefabs` directory then drag and drop the `Interactions.Climbable` prefab into the Unity Hierarchy window.
 
 ![Adding Climbable Prefab To Scene](assets/images/AddingClimbablePrefabToScene.png)
 
 ### Step 5
 
-Our `Interactions.Climbable` GameObject is a simple cube by default, the same as any base interactable. We can change the mesh and colliders by deliving into the prefab, but for now we'll just keep the cube and reposition/resize to match the `Block` GameObject. We can also just delete the existing `Block` GameObject as we are going to replace that end wall with this climbable wall.
+Our `Interactions.Climbable` GameObject is a simple cube by default, the same as any base interactable. We can change the mesh and colliders by delving into the prefab, but for now we'll just keep the cube and reposition/resize to match the `Block` GameObject. We can also just delete the existing `Block` GameObject as we are going to replace that end wall with this climbable wall.
 
-Select the `Interactions.Climbable` GameObject from the Unity hierarchy and on the `Transform` component change the Transform properties to:
+Select the `Interactions.Climbable` GameObject from the Unity Hierarchy and on the `Transform` component change the Transform properties to:
 
 * Position: `X = 0, Y = -3, Z = 7`
 * Scale: `X = 3, Y = 3, Z = 3`
@@ -81,7 +81,7 @@ This is because the `Interactions.Climable` prefab is set up by default to relea
 
 We can sort this by delving into the `Interactions.Climable` prefab and toggling off an event listener.
 
-Select the `Interactions.Climable -> Internal -> Interactions.Interactable` GameObject from the Unity hierarchy and on the `Interactable Facade` component change the `Untouched` event listener from `RunTime Only` to `Off` on the `UngrabOnUntouch` GameObject for the `InteractorAttachPointExtractor.DoExtract` method.
+Select the `Interactions.Climable -> Internal -> Interactions.Interactable` GameObject from the Unity Hierarchy window and on the `Interactable Facade` component change the `Untouched` event listener from `RunTime Only` to `Off` on the `UngrabOnUntouch` GameObject for the `InteractorAttachPointExtractor.DoExtract` method.
 
 ![Disable Ungrab On Untouch Event](assets/images/DisableUngrabOnUntouchEvent.png)
 
@@ -91,7 +91,7 @@ Select the `Interactions.Climable -> Internal -> Interactions.Interactable` Game
 
 As mentioned earlier, we can change the mesh and colliders of our climbable object in the same way we'd change the mesh of any Interactable GameObject.
 
-Select the `Interactions.Climable -> Internal -> Interactions.Interactable` GameObject from the Unity hierarchy and on the `Interactable Facade` component click the `Show Mesh Container` button to expose the inner GameObjects that contain the mesh and collider data for our climbable.
+Select the `Interactions.Climable -> Internal -> Interactions.Interactable` GameObject from the Unity Hierarchy window and on the `Interactable Facade` component click the `Show Mesh Container` button to expose the inner GameObjects that contain the mesh and collider data for our climbable.
 
 ![Click Show Mesh Container](assets/images/ClickShowMeshContainer.png)
 
@@ -107,9 +107,9 @@ Play the Unity scene and you will be able to climb up the custom mesh along with
 
 ![Climb The Custom Rock Mesh](assets/images/ClimbTheCustomRockMesh.png)
 
-[Add the Tilia.Trackers.PseudoBody.Unity -> Trackers.PseudoBody]: https://github.com/ExtendRealityLtd/Tilia.Trackers.PseudoBody.Unity/tree/master/Documentation/HowToGuides/AddingAPseudoBody
-[Adding A PseudoBody]: https://github.com/ExtendRealityLtd/Tilia.Trackers.PseudoBody.Unity/tree/master/Documentation/HowToGuides/AddingAPseudoBody
-[Add the Tilia.Interactions.Interactables.Unity -> Interactions.Interactor]: https://github.com/ExtendRealityLtd/Tilia.Interactions.Interactables.Unity/tree/master/Documentation/HowToGuides/AddingAnInteractor
-[Adding An Interactor]: https://github.com/ExtendRealityLtd/Tilia.Interactions.Interactables.Unity/tree/master/Documentation/HowToGuides/AddingAnInteractor
+[Add the Tilia.Trackers.PseudoBody.Unity -> Trackers.PseudoBody]: https://github.com/ExtendRealityLtd/Tilia.Trackers.PseudoBody.Unity/tree/master/Documentation/HowToGuides/AddingAPseudoBody/README.md
+[Adding A PseudoBody]: https://github.com/ExtendRealityLtd/Tilia.Trackers.PseudoBody.Unity/tree/master/Documentation/HowToGuides/AddingAPseudoBody/README.md
+[Add the Tilia.Interactions.Interactables.Unity -> Interactions.Interactor]: https://github.com/ExtendRealityLtd/Tilia.Interactions.Interactables.Unity/tree/master/Documentation/HowToGuides/AddingAnInteractor/README.md
+[Adding An Interactor]: https://github.com/ExtendRealityLtd/Tilia.Interactions.Interactables.Unity/tree/master/Documentation/HowToGuides/AddingAnInteractor/README.md
 [Install the Tilia.Locomotors.Climbing.Unity]: ../Installation/README.md 
 [Unity]: https://unity3d.com/
