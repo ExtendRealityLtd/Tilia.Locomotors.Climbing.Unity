@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.0](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/compare/v1.4.19...v1.5.0) (2020-12-11)
+
+#### Features
+
+* **HowToGuides:** add guide on how to add climbable objects ([49a17ec](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/commit/49a17ec7d5ab0c565b32c4a7c96c16760af19706))
+  > The guide shows how to add the climbing controller and a climbable object to climb around the scene.
+
 ### [1.4.19](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/compare/v1.4.18...v1.4.19) (2020-11-21)
 
 #### Miscellaneous Chores
