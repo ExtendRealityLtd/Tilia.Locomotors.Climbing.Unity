@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.5.1](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/compare/v1.5.0...v1.5.1) (2020-12-11)
+
+#### Bug Fixes
+
+* **HowToGuides:** apply document styling guidelines ([4e290eb](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/commit/4e290eba24e604f2b0237d6bbd58227dab560a80))
+  > The document style guidelines have been updated and now have been applied to the guides in this repo.
+
 ## [1.5.0](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/compare/v1.4.19...v1.5.0) (2020-12-11)
 
 #### Features
