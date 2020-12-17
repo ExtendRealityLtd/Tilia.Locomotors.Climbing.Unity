@@ -1,5 +1,14 @@
 # Changelog
 
+### [1.5.10](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/compare/v1.5.9...v1.5.10) (2020-12-17)
+
+#### Miscellaneous Chores
+
+* **deps:** bump io.extendreality.tilia.interactions.interactables.unity ([5c41fc9](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/commit/5c41fc9a1bee26caad9e35725683774e9b491b3c))
+  > Bumps [io.extendreality.tilia.interactions.interactables.unity](https://github.com/ExtendRealityLtd/Tilia.Interactions.Interactables.Unity) from 1.15.0 to 1.15.1. - [Release notes](https://github.com/ExtendRealityLtd/Tilia.Interactions.Interactables.Unity/releases) - [Changelog](https://github.com/ExtendRealityLtd/Tilia.Interactions.Interactables.Unity/blob/master/CHANGELOG.md) - [Commits](https://github.com/ExtendRealityLtd/Tilia.Interactions.Interactables.Unity/compare/v1.15.0...v1.15.1)
+  > 
+  > Signed-off-by: dependabot-preview[bot] <support@dependabot.com>
+
 ### [1.5.9](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/compare/v1.5.8...v1.5.9) (2020-12-17)
 
 #### Miscellaneous Chores
