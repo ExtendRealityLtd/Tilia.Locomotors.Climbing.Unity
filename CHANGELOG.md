@@ -1,5 +1,14 @@
 # Changelog
 
+### [1.5.17](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/compare/v1.5.16...v1.5.17) (2021-01-07)
+
+#### Miscellaneous Chores
+
+* **deps:** bump io.extendreality.zinnia.unity from 1.28.1 to 1.29.0 ([374bfff](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/commit/374bfff7012180a0680af36c3f78999463e97733))
+  > Bumps [io.extendreality.zinnia.unity](https://github.com/ExtendRealityLtd/Zinnia.Unity) from 1.28.1 to 1.29.0. - [Release notes](https://github.com/ExtendRealityLtd/Zinnia.Unity/releases) - [Changelog](https://github.com/ExtendRealityLtd/Zinnia.Unity/blob/master/CHANGELOG.md) - [Commits](https://github.com/ExtendRealityLtd/Zinnia.Unity/compare/v1.28.1...v1.29.0)
+  > 
+  > Signed-off-by: dependabot-preview[bot] <support@dependabot.com>
+
 ### [1.5.16](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/compare/v1.5.15...v1.5.16) (2021-01-04)
 
 #### Miscellaneous Chores
