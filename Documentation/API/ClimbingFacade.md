@@ -18,12 +18,15 @@ The public interface for the Climbing prefab.
   * [Interactors]
   * [IsClimbing]
   * [PseudoBodyFacade]
+  * [Target]
 * [Methods]
   * [AddInteractable(GameObject)]
   * [AddInteractor(GameObject)]
+  * [Awake()]
   * [ClearInteractables()]
   * [ClearInteractors()]
   * [OnAfterPseudoBodyFacadeChange()]
+  * [OnAfterTargetChange()]
   * [RemoveInteractable(GameObject)]
   * [RemoveInteractor(GameObject)]
   * [SetVelocityMultiplier(Vector3)]
@@ -137,7 +140,18 @@ The body representation to control.
 ##### Declaration
 
 ```
+[Obsolete("Use `Target` instead.")]
 public PseudoBodyFacade PseudoBodyFacade { get; set; }
+```
+
+#### Target
+
+The target to move when climbing.
+
+##### Declaration
+
+```
+public ClimbTarget Target { get; set; }
 ```
 
 ### Methods
@@ -174,6 +188,14 @@ public virtual void AddInteractor(GameObject interactor)
 | --- | --- | --- |
 | GameObject | interactor | The object to use as a source of the movement. |
 
+#### Awake()
+
+##### Declaration
+
+```
+protected virtual void Awake()
+```
+
 #### ClearInteractables()
 
 Clears the optional offsets of the movement.
@@ -202,6 +224,16 @@ Called after [PseudoBodyFacade] has been changed.
 
 ```
 protected virtual void OnAfterPseudoBodyFacadeChange()
+```
+
+#### OnAfterTargetChange()
+
+Called after [Target] has been changed.
+
+##### Declaration
+
+```
+protected virtual void OnAfterTargetChange()
 ```
 
 #### RemoveInteractable(GameObject)
@@ -272,7 +304,9 @@ public virtual void SetVelocitySource(GameObject source)
 [ClimbingConfigurator]: ClimbingConfigurator.md
 [CurrentInteractable]: ClimbingFacade.md#CurrentInteractable
 [CurrentInteractor]: ClimbingFacade.md#CurrentInteractor
+[ClimbTarget]: Target/ClimbTarget.md
 [PseudoBodyFacade]: ClimbingFacade.md#PseudoBodyFacade
+[Target]: ClimbingFacade.md#Target
 [Inheritance]: #Inheritance
 [Namespace]: #Namespace
 [Syntax]: #Syntax
@@ -287,12 +321,15 @@ public virtual void SetVelocitySource(GameObject source)
 [Interactors]: #Interactors
 [IsClimbing]: #IsClimbing
 [PseudoBodyFacade]: #PseudoBodyFacade
+[Target]: #Target
 [Methods]: #Methods
 [AddInteractable(GameObject)]: #AddInteractableGameObject
 [AddInteractor(GameObject)]: #AddInteractorGameObject
+[Awake()]: #Awake
 [ClearInteractables()]: #ClearInteractables
 [ClearInteractors()]: #ClearInteractors
 [OnAfterPseudoBodyFacadeChange()]: #OnAfterPseudoBodyFacadeChange
+[OnAfterTargetChange()]: #OnAfterTargetChange
 [RemoveInteractable(GameObject)]: #RemoveInteractableGameObject
 [RemoveInteractor(GameObject)]: #RemoveInteractorGameObject
 [SetVelocityMultiplier(Vector3)]: #SetVelocityMultiplierVector3

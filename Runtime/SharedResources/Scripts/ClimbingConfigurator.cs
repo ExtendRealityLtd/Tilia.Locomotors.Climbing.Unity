@@ -3,12 +3,12 @@
     using Malimbe.PropertySerializationAttribute;
     using Malimbe.XmlDocumentationAttribute;
     using System.Collections.Generic;
-    using Tilia.Trackers.PseudoBody;
     using UnityEngine;
     using Zinnia.Data.Attribute;
     using Zinnia.Data.Collection.List;
     using Zinnia.Data.Operation.Mutation;
     using Zinnia.Data.Type.Transformation.Aggregation;
+    using Zinnia.Extension;
     using Zinnia.Tracking.Follow;
     using Zinnia.Tracking.Velocity;
 
@@ -88,8 +88,7 @@
             }
 
             VelocityEmitter.EmitVelocity();
-            Facade.PseudoBodyFacade.ListenToRigidbodyMovement();
-            Facade.PseudoBodyFacade.PhysicsBody.velocity -= VelocityMultiplier.Result;
+            Facade.Target.ApplyVelocity(VelocityMultiplier.Result);
             VelocityProxy.ProxySource = null;
         }
 
@@ -98,7 +97,7 @@
         /// </summary>
         public virtual void ConfigureTargetPositionProperty()
         {
-            TargetPositionProperty.Target = Facade.PseudoBodyFacade.Offset == null ? Facade.PseudoBodyFacade.Source : Facade.PseudoBodyFacade.Offset;
+            TargetPositionProperty.Target = Facade.Target.Target;
         }
 
         protected virtual void OnEnable()
@@ -113,7 +112,7 @@
 
             SourceDistanceComparator.enabled = false;
             OffsetDistanceComparator.enabled = false;
-            ConfigureTargetPositionProperty();
+            Facade.RunWhenActiveAndEnabled(() => ConfigureTargetPositionProperty());
         }
 
         protected virtual void OnDisable()
@@ -169,7 +168,7 @@
 
             if (interactor != null)
             {
-                Facade.PseudoBodyFacade.Interest = PseudoBodyProcessor.MovementInterest.CharacterController;
+                Facade.Target.InteractorAdded();
             }
         }
 
@@ -196,7 +195,7 @@
 
             if (interactable != null)
             {
-                Facade.PseudoBodyFacade.Interest = PseudoBodyProcessor.MovementInterest.CharacterController;
+                Facade.Target.InteractableAdded();
             }
         }
 
