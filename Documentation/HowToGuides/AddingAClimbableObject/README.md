@@ -20,7 +20,7 @@ The ability to climb up objects is a fun and freeing locomotion in virtual reali
 
 ### Step 1
 
-First off, make sure you start with the [Adding A PseudoBody] guide to be sure you're working from that scene as a base for this guide. Then go through the [Adding An Interactor] guide but adding the interactors to the scene you've created in the [Adding A PseudoBody] guide. When it's all done, you should have a Unity scene hierarchy like so:
+First off, make sure you start with the [Adding A PseudoBody] guide to be sure you're working from that scene as a base for this guide. Then go through the [Adding An Interactor] guide and use this guide to add interactors to the scene you've created in the [Adding A PseudoBody] guide. When it's all done, you should have a Unity scene hierarchy like so:
 
 ![Base Scene Setup](assets/images/BaseSceneSetup.png)
 
@@ -36,7 +36,7 @@ Expand the `Tilia Locomotors Climbing Unity` package directory in the Unity Proj
 
 We now need to tell this new Climbing controller about the PseudoBody in the scene so our climbing mechanic can apply world physics on our body.
 
-Drag and drop the `Trackers.PseudoBody` GameObject into the `Pseudo Body Facade` property on the `Climbing Facade` component on the `Locomotors.Climbing` GameObject.
+Drag and drop the `Trackers.PseudoBody` GameObject into the `Pseudo Body Facade` property on the `Pseudo Body Climb Target` component on the `Locomotors.Climbing` GameObject.
 
 ![Drag And Drop Psuedo Body Onto Climbing Facade](assets/images/DragAndDropPsuedoBodyOntoClimbingFacade.png)
 

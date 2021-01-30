@@ -359,6 +359,11 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: Zinnia.Data.Type.Transformation.Aggregation.Vector3Multiplier+UnityEvent,
       Zinnia.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  Failed:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   collection: {fileID: 7479104188349288259}
 --- !u!1 &7479104188752141280
 GameObject:
@@ -410,6 +415,10 @@ MonoBehaviour:
     yState: 1
     zState: 1
   facingDirection: {fileID: 0}
+  applyFacingDirectionOnAxis:
+    xState: 1
+    yState: 1
+    zState: 1
 --- !u!1 &7479104188836637284
 GameObject:
   m_ObjectHideFlags: 0
@@ -1085,6 +1094,11 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: Zinnia.Data.Type.Transformation.Aggregation.Vector3Multiplier+UnityEvent,
       Zinnia.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  Failed:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   collection: {fileID: 7479104189514884766}
 --- !u!1 &7479104189870987517
 GameObject:
@@ -1096,6 +1110,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7479104189870987515}
   - component: {fileID: 7479104189870987516}
+  - component: {fileID: 4014783384565323825}
   m_Layer: 0
   m_Name: Locomotors.Climbing
   m_TagString: Untagged
@@ -1130,6 +1145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03c11e5af5701f34cb093e022fa14276, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 4014783384565323825}
   pseudoBodyFacade: {fileID: 0}
   ClimbStarted:
     m_PersistentCalls:
@@ -1142,3 +1158,16 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   configuration: {fileID: 7479104188993928530}
+--- !u!114 &4014783384565323825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7479104189870987517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a634c97daa707f439a9feebd8c5608b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pseudoBodyFacade: {fileID: 0}

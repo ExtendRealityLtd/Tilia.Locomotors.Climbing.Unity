@@ -5,7 +5,9 @@
     using Malimbe.MemberClearanceMethod;
     using Malimbe.PropertySerializationAttribute;
     using Malimbe.XmlDocumentationAttribute;
+    using System;
     using System.Collections.Generic;
+    using Tilia.Locomotors.Climbing.Target;
     using Tilia.Trackers.PseudoBody;
     using UnityEngine;
     using UnityEngine.Events;
@@ -21,7 +23,8 @@
         /// The body representation to control.
         /// </summary>
         [Serialized, Cleared]
-        [field: Header("Control Settings"), DocumentedByXml]
+        [field: DocumentedByXml, Restricted]
+        [Obsolete("Use `Target` instead.")]
         public PseudoBodyFacade PseudoBodyFacade { get; set; }
         #endregion
 
@@ -40,10 +43,16 @@
 
         #region Reference Settings
         /// <summary>
+        /// The target to move when climbing.
+        /// </summary>
+        [Serialized, Cleared]
+        [field: Header("Reference Settings"), DocumentedByXml]
+        public ClimbTarget Target { get; set; }
+        /// <summary>
         /// The linked <see cref="ClimbingConfigurator"/>.
         /// </summary>
         [Serialized]
-        [field: Header("Reference Settings"), DocumentedByXml, Restricted]
+        [field: DocumentedByXml, Restricted]
         public ClimbingConfigurator Configuration { get; protected set; }
         #endregion
 
@@ -152,13 +161,48 @@
             Configuration.VelocityMultiplier.Collection.CurrentIndex = 0;
         }
 
+        protected virtual void Awake()
+        {
+#pragma warning disable 0618
+            if (PseudoBodyFacade != null)
+            {
+                PsuedoBodyFacadeDeprecatedMessage();
+                PseudoBodyClimbTarget migrateTarget = (PseudoBodyClimbTarget)Target;
+                migrateTarget.PseudoBodyFacade = PseudoBodyFacade;
+                Configuration.ConfigureTargetPositionProperty();
+            }
+#pragma warning restore 0618
+        }
+
+        /// <summary>
+        /// Called after <see cref="Target"/> has been changed.
+        /// </summary>
+        [CalledAfterChangeOf(nameof(Target))]
+        protected virtual void OnAfterTargetChange()
+        {
+            Configuration.ConfigureTargetPositionProperty();
+        }
+
+#pragma warning disable 0618
         /// <summary>
         /// Called after <see cref="PseudoBodyFacade"/> has been changed.
         /// </summary>
         [CalledAfterChangeOf(nameof(PseudoBodyFacade))]
         protected virtual void OnAfterPseudoBodyFacadeChange()
         {
+            PsuedoBodyFacadeDeprecatedMessage();
             Configuration.ConfigureTargetPositionProperty();
+        }
+#pragma warning restore 0618
+
+        private void PsuedoBodyFacadeDeprecatedMessage()
+        {
+#pragma warning disable 0618
+            if (PseudoBodyFacade != null)
+            {
+                Debug.LogWarning("`ClimbingFacade.PseudoBodyFacade` has been deprecated. Use `ClimbingFacade.Target` instead.", gameObject);
+            }
+#pragma warning restore 0618
         }
     }
 }
