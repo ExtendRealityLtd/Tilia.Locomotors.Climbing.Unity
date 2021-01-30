@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.6.0](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/compare/v1.5.21...v1.6.0) (2021-01-30)
+
+#### Features
+
+* **Target:** extract target that climbing mutates ([e3cda5f](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/commit/e3cda5f4dfa2827bd1a3cce984e45784d0ff1135))
+  > The Climb Facade would previously take an injected dependency of the PsuedoBodyFacade to determine which target to mutate in the scene.
+  > 
+  > This hard coupled the Climbing mechanic to the requirement of a PsuedoBody, which it didn't really need. The new way is to have an abstract class that handles all of the generic mechanisms required by climbing to move the target, this is the ClimbTarget class.
+  > 
+  > Then the Climbing Facade has a concrete ClimbTarget injected to know how to mutate the target in the scene. The concrete PsuedoBodyClimbTarget allows the climbing to work with a PsuedoBody still.
+  > 
+  > The Original injected PsuedoBodyFacade property has been deprecated so it will still work if this option is set but it will give a console warning.
+
 ### [1.5.21](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/compare/v1.5.20...v1.5.21) (2021-01-07)
 
 #### Miscellaneous Chores
