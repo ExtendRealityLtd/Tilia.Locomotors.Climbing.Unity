@@ -27,7 +27,7 @@
     "dependencies": {
         "io.extendreality.zinnia.unity": "1.33.0",
         "io.extendreality.tilia.trackers.pseudobody.unity": "1.5.10",
-        "io.extendreality.tilia.interactions.interactables.unity": "1.15.10"
+        "io.extendreality.tilia.interactions.interactables.unity": "1.15.11"
     },
     "files": [
         "*.md",
