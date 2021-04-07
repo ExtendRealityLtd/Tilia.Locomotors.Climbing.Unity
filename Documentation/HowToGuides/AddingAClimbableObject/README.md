@@ -28,9 +28,7 @@ First off, make sure you start with the [Adding A PseudoBody] guide to be sure y
 
 We're now ready to set up the required prefabs for climbing. First off we need to add the climbing controller that communicates with the PseudoBody.
 
-Expand the `Tilia Locomotors Climbing Unity` package directory in the Unity Project window and select the `Packages -> Tilia Locomotors Climbing Unity -> Runtime -> Prefabs` directory then drag and drop the `Locomotors.Climbing` prefab into the Unity Hierarchy window.
-
-![Adding Climbing Prefab To Scene](assets/images/AddingClimbingPrefabToScene.png)
+Add a `Locomotors.Climbing` prefab to the Unity project hierarchy by selecting `GameObject -> Tilia -> Prefabs -> Locomotors -> Climbing -> Locomotors.Climbing` from the Unity main top menu.
 
 ### Step 3
 
@@ -38,15 +36,13 @@ We now need to tell this new Climbing controller about the PseudoBody in the sce
 
 Drag and drop the `Trackers.PseudoBody` GameObject into the `Pseudo Body Facade` property on the `Pseudo Body Climb Target` component on the `Locomotors.Climbing` GameObject.
 
-![Drag And Drop Psuedo Body Onto Climbing Facade](assets/images/DragAndDropPsuedoBodyOntoClimbingFacade.png)
+![Drag And Drop Pseudo Body Onto Climbing Facade](assets/images/DragAndDropPsuedoBodyOntoClimbingFacade.png)
 
 ### Step 4
 
 Next is to add a special interactable object that can be grabbed by an interactor but will work as the basis of our climbable object.
 
-Expand the `Tilia Locomotors Climbing Unity` package directory in the Unity Project window and select the `Packages -> Tilia Locomotors Climbing Unity -> Runtime -> Prefabs` directory then drag and drop the `Interactions.Climbable` prefab into the Unity Hierarchy window.
-
-![Adding Climbable Prefab To Scene](assets/images/AddingClimbablePrefabToScene.png)
+Add a `Interactions.Climbable` prefab to the Unity project hierarchy by selecting `GameObject -> Tilia -> Prefabs -> Interactions -> Interactables -> Interactions.Climbable` from the Unity main top menu.
 
 ### Step 5
 

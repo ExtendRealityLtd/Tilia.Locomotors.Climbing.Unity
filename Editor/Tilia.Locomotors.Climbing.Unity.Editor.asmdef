@@ -1,0 +1,16 @@
+{
+    "name": "Tilia.Locomotors.Climbing.Unity.Editor",
+    "references": [
+        "Zinnia.Editor"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": []
+}

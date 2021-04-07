@@ -2,6 +2,6 @@
 
 <Weavers>
   <Malimbe.FodyRunner>
-    <AssemblyNameRegex>^Tilia</AssemblyNameRegex>
+    <AssemblyNameRegex>^Tilia.Locomotors.Climbing</AssemblyNameRegex>
   </Malimbe.FodyRunner>
 </Weavers>
