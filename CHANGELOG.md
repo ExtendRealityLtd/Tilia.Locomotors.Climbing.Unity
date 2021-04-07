@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.7.0](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/compare/v1.6.20...v1.7.0) (2021-04-07)
+
+#### Features
+
+* **Utility:** add prefab creator ([4f80015](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/commit/4f800157dbfc39aa1b9820df52dfb66a33ee43f7))
+  > The latest version of Zinnia has the basis of a prefab creator that can be used to enable easy adding of prefabs to a scene without needing to drag and drop from directories. Instead a new menu item is added for quickly adding prefabs. The guide has been updated to accommodate this and the FodyWeavers.xml is now located in the root to serve both the Runtime and Editor scripts.
+
+#### Bug Fixes
+
+* **package.json:** add missing reference to Editor directory ([bc72d1d](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/commit/bc72d1d8d3bb610da75bd069add27ca0ad994593))
+  > The build will fail without referencing this new Editor directory so it has now been added to the package.
+
 ### [1.6.20](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/compare/v1.6.19...v1.6.20) (2021-04-01)
 
 #### Miscellaneous Chores
