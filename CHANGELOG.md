@@ -1,5 +1,20 @@
 # Changelog
 
+### [1.7.11](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/compare/v1.7.10...v1.7.11) (2021-05-14)
+
+#### Miscellaneous Chores
+
+* **deps:** bump io.extendreality.tilia.interactions.interactables.unity ([9c2b4a5](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/commit/9c2b4a5cf1126b369df80d8b58e30cac09f0afce))
+  > Bumps [io.extendreality.tilia.interactions.interactables.unity](https://github.com/ExtendRealityLtd/Tilia.Interactions.Interactables.Unity) from 1.18.0 to 1.19.0. - [Release notes](https://github.com/ExtendRealityLtd/Tilia.Interactions.Interactables.Unity/releases) - [Changelog](https://github.com/ExtendRealityLtd/Tilia.Interactions.Interactables.Unity/blob/master/CHANGELOG.md) - [Commits](https://github.com/ExtendRealityLtd/Tilia.Interactions.Interactables.Unity/compare/v1.18.0...v1.19.0)
+  > 
+  > Signed-off-by: dependabot[bot] <support@github.com>
+* **deps:** bump io.extendreality.tilia.trackers.pseudobody.unity ([1158b58](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/commit/1158b58d80b346cfb23e53bbaa37506f1a3cf115))
+  > Bumps [io.extendreality.tilia.trackers.pseudobody.unity](https://github.com/ExtendRealityLtd/Tilia.Trackers.PseudoBody.Unity) from 1.6.9 to 1.6.10. - [Release notes](https://github.com/ExtendRealityLtd/Tilia.Trackers.PseudoBody.Unity/releases) - [Changelog](https://github.com/ExtendRealityLtd/Tilia.Trackers.PseudoBody.Unity/blob/master/CHANGELOG.md) - [Commits](https://github.com/ExtendRealityLtd/Tilia.Trackers.PseudoBody.Unity/compare/v1.6.9...v1.6.10)
+  > 
+  > Signed-off-by: dependabot[bot] <support@github.com>
+* **README.md:** update title logo to related-media repo ([096ef41](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/commit/096ef4174b07287fbcc7496035d2c0ccf90fde58))
+  > The title logo is now located on the related-media repo.
+
 ### [1.7.10](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/compare/v1.7.9...v1.7.10) (2021-05-10)
 
 #### Miscellaneous Chores
