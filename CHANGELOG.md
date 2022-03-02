@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.0](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/compare/v1.7.64...v1.8.0) (2022-03-02)
+
+#### Features
+
+* **package.json:** add information urls to package ([a4e08f3](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/commit/a4e08f387d718a8133bf7f3e9739655cd033d3e5))
+  > The changelog, documentation and license url has been added to the package.json as these are used within the Unity package manager.
+
 ### [1.7.64](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/compare/v1.7.63...v1.7.64) (2022-02-14)
 
 #### Miscellaneous Chores
