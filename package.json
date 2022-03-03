@@ -29,7 +29,7 @@
     },
     "dependencies": {
         "io.extendreality.zinnia.unity": "1.46.0",
-        "io.extendreality.tilia.trackers.pseudobody.unity": "1.8.2",
+        "io.extendreality.tilia.trackers.pseudobody.unity": "1.8.3",
         "io.extendreality.tilia.interactions.interactables.unity": "1.24.0"
     },
     "files": [
