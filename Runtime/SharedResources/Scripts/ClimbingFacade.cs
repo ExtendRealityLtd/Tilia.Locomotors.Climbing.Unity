@@ -1,10 +1,5 @@
 ﻿namespace Tilia.Locomotors.Climbing
 {
-    using Malimbe.BehaviourStateRequirementMethod;
-    using Malimbe.MemberChangeMethod;
-    using Malimbe.MemberClearanceMethod;
-    using Malimbe.PropertySerializationAttribute;
-    using Malimbe.XmlDocumentationAttribute;
     using System;
     using System.Collections.Generic;
     using Tilia.Locomotors.Climbing.Target;
@@ -12,79 +7,159 @@
     using UnityEngine;
     using UnityEngine.Events;
     using Zinnia.Data.Attribute;
+    using Zinnia.Extension;
 
     /// <summary>
     /// The public interface for the Climbing prefab.
     /// </summary>
     public class ClimbingFacade : MonoBehaviour
     {
+#pragma warning disable 0618
         #region Control Settings
+        [Tooltip("The body representation to control.")]
+        [SerializeField]
+        [Restricted]
+        [Obsolete("Use `Target` instead.")]
+        private PseudoBodyFacade pseudoBodyFacade;
         /// <summary>
         /// The body representation to control.
         /// </summary>
-        [Serialized, Cleared]
-        [field: DocumentedByXml, Restricted]
         [Obsolete("Use `Target` instead.")]
-        public PseudoBodyFacade PseudoBodyFacade { get; set; }
+        public PseudoBodyFacade PseudoBodyFacade
+        {
+            get
+            {
+                return pseudoBodyFacade;
+            }
+            set
+            {
+                pseudoBodyFacade = value;
+                if (this.IsMemberChangeAllowed())
+                {
+                    OnAfterPseudoBodyFacadeChange();
+                }
+            }
+        }
         #endregion
+#pragma warning restore 0618
 
         #region Events
         /// <summary>
         /// Emitted when a climb starts.
         /// </summary>
-        [Header("Events"), DocumentedByXml]
+        [Header("Events")]
         public UnityEvent ClimbStarted = new UnityEvent();
         /// <summary>
         /// Emitted when the climb stops.
         /// </summary>
-        [DocumentedByXml]
         public UnityEvent ClimbStopped = new UnityEvent();
         #endregion
 
         #region Reference Settings
+        [Header("Reference Settings")]
+        [Tooltip("The target to move when climbing.")]
+        [SerializeField]
+        private ClimbTarget target;
         /// <summary>
         /// The target to move when climbing.
         /// </summary>
-        [Serialized, Cleared]
-        [field: Header("Reference Settings"), DocumentedByXml]
-        public ClimbTarget Target { get; set; }
+        public ClimbTarget Target
+        {
+            get
+            {
+                return target;
+            }
+            set
+            {
+                target = value;
+                if (this.IsMemberChangeAllowed())
+                {
+                    OnAfterTargetChange();
+                }
+            }
+        }
+        [Tooltip("The linked ClimbingConfigurator.")]
+        [SerializeField]
+        [Restricted]
+        private ClimbingConfigurator configuration;
         /// <summary>
         /// The linked <see cref="ClimbingConfigurator"/>.
         /// </summary>
-        [Serialized]
-        [field: DocumentedByXml, Restricted]
-        public ClimbingConfigurator Configuration { get; protected set; }
+        public ClimbingConfigurator Configuration
+        {
+            get
+            {
+                return configuration;
+            }
+            protected set
+            {
+                configuration = value;
+            }
+        }
         #endregion
 
         /// <summary>
         /// The current source of the movement. The body will be moved in reverse direction in case this object moves.
         /// </summary>
-        public GameObject CurrentInteractor => Interactors.Count == 0 ? null : Interactors[Interactors.Count - 1];
+        public virtual GameObject CurrentInteractor => Interactors.Count == 0 ? null : Interactors[Interactors.Count - 1];
         /// <summary>
         /// The current optional offset of the movement. The body will be moved in case this object moves.
         /// </summary>
-        public GameObject CurrentInteractable => Interactables.Count == 0 ? null : Interactables[Interactors.Count - 1];
+        public virtual GameObject CurrentInteractable => Interactables.Count == 0 ? null : Interactables[Interactors.Count - 1];
         /// <summary>
         /// Whether a climb is happening right now.
         /// </summary>
-        public bool IsClimbing => Interactors.Count > 0 || Interactables.Count > 0;
+        public virtual bool IsClimbing => Interactors.Count > 0 || Interactables.Count > 0;
 
         /// <summary>
         /// The objects that define the source of movement in order they should be used. The last object defines <see cref="CurrentInteractor"/>.
         /// </summary>
-        public IReadOnlyList<GameObject> Interactors => Configuration.Interactors.NonSubscribableElements;
+        public virtual IReadOnlyList<GameObject> Interactors => Configuration.Interactors.NonSubscribableElements;
         /// <summary>
         /// The objects that define the optional offsets of movement in order they should be used. The last object defines <see cref="CurrentInteractable"/>.
         /// </summary>
-        public IReadOnlyList<GameObject> Interactables => Configuration.Interactables.NonSubscribableElements;
+        public virtual IReadOnlyList<GameObject> Interactables => Configuration.Interactables.NonSubscribableElements;
+
+#pragma warning disable 0618
+        /// <summary>
+        /// Clears <see cref="PseudoBodyFacade"/>.
+        /// </summary>
+        [Obsolete("`ClimbingFacade.PseudoBodyFacade` has been deprecated. Use `ClimbingFacade.Target` instead.")]
+        public virtual void ClearPseudoBodyFacade()
+        {
+            if (!this.IsValidState())
+            {
+                return;
+            }
+
+            PseudoBodyFacade = default;
+        }
+#pragma warning restore 0618
+
+        /// <summary>
+        /// Clears <see cref="Target"/>.
+        /// </summary>
+        public virtual void ClearTarget()
+        {
+            if (!this.IsValidState())
+            {
+                return;
+            }
+
+            Target = default;
+        }
 
         /// <summary>
         /// Adds a source of movement for the body.
         /// </summary>
         /// <param name="interactor">The object to use as a source of the movement.</param>
-        [RequiresBehaviourState]
         public virtual void AddInteractor(GameObject interactor)
         {
+            if (!this.IsValidState())
+            {
+                return;
+            }
+
             Configuration.Interactors.Add(interactor);
         }
 
@@ -92,10 +167,9 @@
         /// Removes a source of movement for the body.
         /// </summary>
         /// <param name="interactor">The object used as a source of the movement.</param>
-        [RequiresBehaviourState]
         public virtual void RemoveInteractor(GameObject interactor)
         {
-            if (!Configuration.Interactors.Contains(interactor))
+            if (!this.IsValidState() || !Configuration.Interactors.Contains(interactor))
             {
                 return;
             }
@@ -107,9 +181,13 @@
         /// <summary>
         /// Clears the sources of the movement.
         /// </summary>
-        [RequiresBehaviourState]
         public virtual void ClearInteractors()
         {
+            if (!this.IsValidState())
+            {
+                return;
+            }
+
             Configuration.Interactors.Clear();
         }
 
@@ -117,9 +195,13 @@
         /// Adds an optional offset of movement for the body.
         /// </summary>
         /// <param name="interactable">The object to use as an optional offset of the movement.</param>
-        [RequiresBehaviourState]
         public virtual void AddInteractable(GameObject interactable)
         {
+            if (!this.IsValidState())
+            {
+                return;
+            }
+
             Configuration.Interactables.Add(interactable);
         }
 
@@ -127,18 +209,26 @@
         /// Removes an optional offset of movement for the body.
         /// </summary>
         /// <param name="interactable">The object used as an optional offset of the movement.</param>
-        [RequiresBehaviourState]
         public virtual void RemoveInteractable(GameObject interactable)
         {
+            if (!this.IsValidState())
+            {
+                return;
+            }
+
             Configuration.Interactables.RemoveLastOccurrence(interactable);
         }
 
         /// <summary>
         /// Clears the optional offsets of the movement.
         /// </summary>
-        [RequiresBehaviourState]
         public virtual void ClearInteractables()
         {
+            if (!this.IsValidState())
+            {
+                return;
+            }
+
             Configuration.Interactables.Clear();
         }
 
@@ -177,7 +267,6 @@
         /// <summary>
         /// Called after <see cref="Target"/> has been changed.
         /// </summary>
-        [CalledAfterChangeOf(nameof(Target))]
         protected virtual void OnAfterTargetChange()
         {
             Configuration.ConfigureTargetPositionProperty();
@@ -187,7 +276,6 @@
         /// <summary>
         /// Called after <see cref="PseudoBodyFacade"/> has been changed.
         /// </summary>
-        [CalledAfterChangeOf(nameof(PseudoBodyFacade))]
         protected virtual void OnAfterPseudoBodyFacadeChange()
         {
             PsuedoBodyFacadeDeprecatedMessage();

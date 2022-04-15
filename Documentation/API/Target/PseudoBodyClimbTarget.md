@@ -12,6 +12,7 @@ Controls a [PseudoBodyFacade] by the [ClimbingFacade] operation.
   * [Target]
 * [Methods]
   * [ApplyVelocity(Vector3)]
+  * [ClearPseudoBodyFacade()]
   * [InteractableAdded()]
   * [InteractorAdded()]
 
@@ -81,6 +82,16 @@ public override void ApplyVelocity(Vector3 velocity)
 
 [ClimbTarget.ApplyVelocity(Vector3)]
 
+#### ClearPseudoBodyFacade()
+
+Clears [PseudoBodyFacade].
+
+##### Declaration
+
+```
+public virtual void ClearPseudoBodyFacade()
+```
+
 #### InteractableAdded()
 
 Processed when an Interactable is added to the [ClimbingFacade].
@@ -116,6 +127,7 @@ public override void InteractorAdded()
 [ClimbTarget.Target]: ClimbTarget.md#Tilia_Locomotors_Climbing_Target_ClimbTarget_Target
 [Target]: ClimbTarget.md#Tilia_Locomotors_Climbing_Target_ClimbTarget_Target
 [ClimbTarget.ApplyVelocity(Vector3)]: ClimbTarget.md#Tilia_Locomotors_Climbing_Target_ClimbTarget_ApplyVelocity_Vector3_
+[PseudoBodyFacade]: PseudoBodyClimbTarget.md#PseudoBodyFacade
 [ClimbTarget.InteractableAdded()]: ClimbTarget.md#Tilia_Locomotors_Climbing_Target_ClimbTarget_InteractableAdded
 [ClimbTarget.InteractorAdded()]: ClimbTarget.md#Tilia_Locomotors_Climbing_Target_ClimbTarget_InteractorAdded
 [Inheritance]: #Inheritance
@@ -126,5 +138,6 @@ public override void InteractorAdded()
 [Target]: #Target
 [Methods]: #Methods
 [ApplyVelocity(Vector3)]: #ApplyVelocityVector3
+[ClearPseudoBodyFacade()]: #ClearPseudoBodyFacade
 [InteractableAdded()]: #InteractableAdded
 [InteractorAdded()]: #InteractorAdded

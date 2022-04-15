@@ -1,7 +1,5 @@
 ﻿namespace Tilia.Locomotors.Climbing
 {
-    using Malimbe.PropertySerializationAttribute;
-    using Malimbe.XmlDocumentationAttribute;
     using System.Collections.Generic;
     using UnityEngine;
     using Zinnia.Data.Attribute;
@@ -18,63 +16,173 @@
     public class ClimbingConfigurator : MonoBehaviour
     {
         #region Facade Settings
+        [Header("Facade Settings")]
+        [Tooltip("The public interface facade.")]
+        [SerializeField]
+        [Restricted]
+        private ClimbingFacade facade;
         /// <summary>
         /// The public interface facade.
         /// </summary>
-        [Serialized]
-        [field: Header("Facade Settings"), DocumentedByXml, Restricted]
-        public ClimbingFacade Facade { get; protected set; }
+        public ClimbingFacade Facade
+        {
+            get
+            {
+                return facade;
+            }
+            protected set
+            {
+                facade = value;
+            }
+        }
         #endregion
 
         #region Reference Settings
+        [Header("Reference Settings")]
+        [Tooltip("The objects defining the sources of movement.")]
+        [SerializeField]
+        [Restricted]
+        private GameObjectObservableList interactors;
         /// <summary>
         /// The objects defining the sources of movement.
         /// </summary>
-        [Serialized]
-        [field: Header("Reference Settings"), DocumentedByXml, Restricted]
-        public GameObjectObservableList Interactors { get; protected set; }
+        public GameObjectObservableList Interactors
+        {
+            get
+            {
+                return interactors;
+            }
+            protected set
+            {
+                interactors = value;
+            }
+        }
+        [Tooltip("The objects defining the offsets of movement.")]
+        [SerializeField]
+        [Restricted]
+        private GameObjectObservableList interactables;
         /// <summary>
         /// The objects defining the offsets of movement.
         /// </summary>
-        [Serialized]
-        [field: DocumentedByXml, Restricted]
-        public GameObjectObservableList Interactables { get; protected set; }
+        public GameObjectObservableList Interactables
+        {
+            get
+            {
+                return interactables;
+            }
+            protected set
+            {
+                interactables = value;
+            }
+        }
+        [Tooltip("The ComponentTrackerProxy component for obtaining velocity data.")]
+        [SerializeField]
+        [Restricted]
+        private ComponentTrackerProxy velocityProxy;
         /// <summary>
         /// The <see cref="ComponentTrackerProxy"/> component for obtaining velocity data.
         /// </summary>
-        [Serialized]
-        [field: DocumentedByXml, Restricted]
-        public ComponentTrackerProxy VelocityProxy { get; protected set; }
+        public ComponentTrackerProxy VelocityProxy
+        {
+            get
+            {
+                return velocityProxy;
+            }
+            protected set
+            {
+                velocityProxy = value;
+            }
+        }
+        [Tooltip("The Zinnia.Tracking.Velocity.VelocityEmitter component for emitting velocity data.")]
+        [SerializeField]
+        [Restricted]
+        private VelocityEmitter velocityEmitter;
         /// <summary>
         /// The <see cref="Zinnia.Tracking.Velocity.VelocityEmitter"/> component for emitting velocity data.
         /// </summary>
-        [Serialized]
-        [field: DocumentedByXml, Restricted]
-        public VelocityEmitter VelocityEmitter { get; protected set; }
+        public VelocityEmitter VelocityEmitter
+        {
+            get
+            {
+                return velocityEmitter;
+            }
+            protected set
+            {
+                velocityEmitter = value;
+            }
+        }
+        [Tooltip("The Vector3Multiplier component for multiplying velocity data.")]
+        [SerializeField]
+        [Restricted]
+        private Vector3Multiplier velocityMultiplier;
         /// <summary>
         /// The <see cref="Vector3Multiplier"/> component for multiplying velocity data.
         /// </summary>
-        [Serialized]
-        [field: DocumentedByXml, Restricted]
-        public Vector3Multiplier VelocityMultiplier { get; protected set; }
+        public Vector3Multiplier VelocityMultiplier
+        {
+            get
+            {
+                return velocityMultiplier;
+            }
+            protected set
+            {
+                velocityMultiplier = value;
+            }
+        }
+        [Tooltip("The ObjectDistanceComparator component for the source.")]
+        [SerializeField]
+        [Restricted]
+        private ObjectDistanceComparator sourceDistanceComparator;
         /// <summary>
         /// The <see cref="ObjectDistanceComparator"/> component for the source.
         /// </summary>
-        [Serialized]
-        [field: DocumentedByXml, Restricted]
-        public ObjectDistanceComparator SourceDistanceComparator { get; protected set; }
+        public ObjectDistanceComparator SourceDistanceComparator
+        {
+            get
+            {
+                return sourceDistanceComparator;
+            }
+            protected set
+            {
+                sourceDistanceComparator = value;
+            }
+        }
+        [Tooltip("The ObjectDistanceComparator component for the offset.")]
+        [SerializeField]
+        [Restricted]
+        private ObjectDistanceComparator offsetDistanceComparator;
         /// <summary>
         /// The <see cref="ObjectDistanceComparator"/> component for the offset.
         /// </summary>
-        [Serialized]
-        [field: DocumentedByXml, Restricted]
-        public ObjectDistanceComparator OffsetDistanceComparator { get; protected set; }
+        public ObjectDistanceComparator OffsetDistanceComparator
+        {
+            get
+            {
+                return offsetDistanceComparator;
+            }
+            protected set
+            {
+                offsetDistanceComparator = value;
+            }
+        }
+        [Tooltip("The TransformPositionMutator component for the offset.")]
+        [SerializeField]
+        [Restricted]
+        private TransformPositionMutator targetPositionProperty;
         /// <summary>
         /// The <see cref="TransformPositionMutator"/> component for the offset.
         /// </summary>
-        [Serialized]
-        [field: DocumentedByXml, Restricted]
-        public TransformPositionMutator TargetPositionProperty { get; protected set; }
+        public TransformPositionMutator TargetPositionProperty
+        {
+            get
+            {
+                return targetPositionProperty;
+            }
+            protected set
+            {
+                targetPositionProperty = value;
+            }
+        }
         #endregion
 
         /// <summary>

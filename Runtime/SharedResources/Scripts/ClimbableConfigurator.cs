@@ -1,7 +1,5 @@
 ﻿namespace Tilia.Locomotors.Climbing
 {
-    using Malimbe.PropertySerializationAttribute;
-    using Malimbe.XmlDocumentationAttribute;
     using Tilia.Interactions.Interactables.Interactables;
     using UnityEngine;
     using Zinnia.Data.Attribute;
@@ -13,33 +11,83 @@
     public class ClimbableConfigurator : MonoBehaviour
     {
         #region Facade Settings
+        [Header("Facade Settings")]
+        [Tooltip("The public interface facade.")]
+        [SerializeField]
+        [Restricted]
+        private ClimbableFacade facade;
         /// <summary>
         /// The public interface facade.
         /// </summary>
-        [Serialized]
-        [field: Header("Facade Settings"), DocumentedByXml, Restricted]
-        public ClimbableFacade Facade { get; protected set; }
+        public ClimbableFacade Facade
+        {
+            get
+            {
+                return facade;
+            }
+            protected set
+            {
+                facade = value;
+            }
+        }
         #endregion
 
         #region Reference Settings
+        [Header("Reference Settings")]
+        [Tooltip("The InteractableFacade component acting as the interactable for climbing.")]
+        [SerializeField]
+        [Restricted]
+        private InteractableFacade interactableFacade;
         /// <summary>
         /// The <see cref="InteractableFacade"/> component acting as the interactable for climbing.
         /// </summary>
-        [Serialized]
-        [field: Header("Reference Settings"), DocumentedByXml, Restricted]
-        public InteractableFacade InteractableFacade { get; protected set; }
+        public InteractableFacade InteractableFacade
+        {
+            get
+            {
+                return interactableFacade;
+            }
+            protected set
+            {
+                interactableFacade = value;
+            }
+        }
+        [Tooltip("The GameObjectEventProxyEmitter component handling a started climb.")]
+        [SerializeField]
+        [Restricted]
+        private GameObjectEventProxyEmitter startEventProxyEmitter;
         /// <summary>
         /// The <see cref="GameObjectEventProxyEmitter"/> component handling a started climb.
         /// </summary>
-        [Serialized]
-        [field: DocumentedByXml, Restricted]
-        public GameObjectEventProxyEmitter StartEventProxyEmitter { get; protected set; }
+        public GameObjectEventProxyEmitter StartEventProxyEmitter
+        {
+            get
+            {
+                return startEventProxyEmitter;
+            }
+            protected set
+            {
+                startEventProxyEmitter = value;
+            }
+        }
+        [Tooltip("The GameObjectEventProxyEmitter component handling a stopped climb.")]
+        [SerializeField]
+        [Restricted]
+        private GameObjectEventProxyEmitter stopEventProxyEmitter;
         /// <summary>
         /// The <see cref="GameObjectEventProxyEmitter"/> component handling a stopped climb.
         /// </summary>
-        [Serialized]
-        [field: DocumentedByXml, Restricted]
-        public GameObjectEventProxyEmitter StopEventProxyEmitter { get; protected set; }
+        public GameObjectEventProxyEmitter StopEventProxyEmitter
+        {
+            get
+            {
+                return stopEventProxyEmitter;
+            }
+            protected set
+            {
+                stopEventProxyEmitter = value;
+            }
+        }
         #endregion
 
         protected virtual void OnEnable()
