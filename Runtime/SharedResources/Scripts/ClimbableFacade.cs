@@ -1,7 +1,5 @@
 ﻿namespace Tilia.Locomotors.Climbing
 {
-    using Malimbe.PropertySerializationAttribute;
-    using Malimbe.XmlDocumentationAttribute;
     using UnityEngine;
     using Zinnia.Data.Attribute;
 
@@ -11,27 +9,63 @@
     public class ClimbableFacade : MonoBehaviour
     {
         #region Climb Settings
+        [Header("Climb Settings")]
+        [Tooltip("The ClimbingFacade to use.")]
+        [SerializeField]
+        private ClimbingFacade climbingFacade;
         /// <summary>
         /// The <see cref="ClimbingFacade"/> to use.
         /// </summary>
-        [Serialized]
-        [field: Header("Climb Settings"), DocumentedByXml]
-        public ClimbingFacade ClimbingFacade { get; set; }
+        public ClimbingFacade ClimbingFacade
+        {
+            get
+            {
+                return climbingFacade;
+            }
+            set
+            {
+                climbingFacade = value;
+            }
+        }
+        [Tooltip("The multiplier to apply to the velocity of the interactor when the interactable is released and climbing stops.")]
+        [SerializeField]
+        private Vector3 releaseMultiplier = Vector3.one;
         /// <summary>
         /// The multiplier to apply to the velocity of the interactor when the interactable is released and climbing stops.
         /// </summary>
-        [Serialized]
-        [field: DocumentedByXml]
-        public Vector3 ReleaseMultiplier { get; set; } = Vector3.one;
+        public Vector3 ReleaseMultiplier
+        {
+            get
+            {
+                return releaseMultiplier;
+            }
+            set
+            {
+                releaseMultiplier = value;
+            }
+        }
         #endregion
 
         #region Reference Settings
+        [Header("Reference Settings")]
+        [Tooltip("The linked ClimbableConfigurator.")]
+        [SerializeField]
+        [Restricted]
+        private ClimbableConfigurator configuration;
         /// <summary>
         /// The linked <see cref="ClimbableConfigurator"/>.
         /// </summary>
-        [Serialized]
-        [field: Header("Reference Settings"), DocumentedByXml, Restricted]
-        public ClimbableConfigurator Configuration { get; protected set; }
+        public ClimbableConfigurator Configuration
+        {
+            get
+            {
+                return configuration;
+            }
+            protected set
+            {
+                configuration = value;
+            }
+        }
         #endregion
 
         /// <summary>

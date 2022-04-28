@@ -25,6 +25,8 @@ The public interface for the Climbing prefab.
   * [Awake()]
   * [ClearInteractables()]
   * [ClearInteractors()]
+  * [ClearPseudoBodyFacade()]
+  * [ClearTarget()]
   * [OnAfterPseudoBodyFacadeChange()]
   * [OnAfterTargetChange()]
   * [RemoveInteractable(GameObject)]
@@ -90,7 +92,7 @@ The current optional offset of the movement. The body will be moved in case this
 ##### Declaration
 
 ```
-public GameObject CurrentInteractable { get; }
+public virtual GameObject CurrentInteractable { get; }
 ```
 
 #### CurrentInteractor
@@ -100,7 +102,7 @@ The current source of the movement. The body will be moved in reverse direction 
 ##### Declaration
 
 ```
-public GameObject CurrentInteractor { get; }
+public virtual GameObject CurrentInteractor { get; }
 ```
 
 #### Interactables
@@ -110,7 +112,7 @@ The objects that define the optional offsets of movement in order they should be
 ##### Declaration
 
 ```
-public IReadOnlyList<GameObject> Interactables { get; }
+public virtual IReadOnlyList<GameObject> Interactables { get; }
 ```
 
 #### Interactors
@@ -120,7 +122,7 @@ The objects that define the source of movement in order they should be used. The
 ##### Declaration
 
 ```
-public IReadOnlyList<GameObject> Interactors { get; }
+public virtual IReadOnlyList<GameObject> Interactors { get; }
 ```
 
 #### IsClimbing
@@ -130,7 +132,7 @@ Whether a climb is happening right now.
 ##### Declaration
 
 ```
-public bool IsClimbing { get; }
+public virtual bool IsClimbing { get; }
 ```
 
 #### PseudoBodyFacade
@@ -214,6 +216,27 @@ Clears the sources of the movement.
 
 ```
 public virtual void ClearInteractors()
+```
+
+#### ClearPseudoBodyFacade()
+
+Clears [PseudoBodyFacade].
+
+##### Declaration
+
+```
+[Obsolete("`ClimbingFacade.PseudoBodyFacade` has been deprecated. Use `ClimbingFacade.Target` instead.")]
+public virtual void ClearPseudoBodyFacade()
+```
+
+#### ClearTarget()
+
+Clears [Target].
+
+##### Declaration
+
+```
+public virtual void ClearTarget()
 ```
 
 #### OnAfterPseudoBodyFacadeChange()
@@ -307,6 +330,8 @@ public virtual void SetVelocitySource(GameObject source)
 [ClimbTarget]: Target/ClimbTarget.md
 [PseudoBodyFacade]: ClimbingFacade.md#PseudoBodyFacade
 [Target]: ClimbingFacade.md#Target
+[PseudoBodyFacade]: ClimbingFacade.md#PseudoBodyFacade
+[Target]: ClimbingFacade.md#Target
 [Inheritance]: #Inheritance
 [Namespace]: #Namespace
 [Syntax]: #Syntax
@@ -328,6 +353,8 @@ public virtual void SetVelocitySource(GameObject source)
 [Awake()]: #Awake
 [ClearInteractables()]: #ClearInteractables
 [ClearInteractors()]: #ClearInteractors
+[ClearPseudoBodyFacade()]: #ClearPseudoBodyFacade
+[ClearTarget()]: #ClearTarget
 [OnAfterPseudoBodyFacadeChange()]: #OnAfterPseudoBodyFacadeChange
 [OnAfterTargetChange()]: #OnAfterTargetChange
 [RemoveInteractable(GameObject)]: #RemoveInteractableGameObject
