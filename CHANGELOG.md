@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.0.0](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/compare/v1.8.10...v2.0.0) (2022-04-28)
+
+#### :warning: BREAKING CHANGES :warning:
+
+* **Malimbe:** This removes the last remaining elements of Malimbe and whilst it does not cause any breaking changes within this package, it removes Malimbe as a dependency which other projects that rely on this package may piggy back off this Malimbe dependency so it will break any project like that.
+
+All of the previous functionality from Malimbe has been replicated in standard code without the need for it to be weaved by the Malimbe helper tags. ([22a9d1a](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/commit/22a9d1a223f85c6e681ff79ab691c4765ef1e0ae))
+
+#### Features
+
+* **Malimbe:** remove malimbe dependency ([22a9d1a](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/commit/22a9d1a223f85c6e681ff79ab691c4765ef1e0ae))
+
 ### [1.8.10](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/compare/v1.8.9...v1.8.10) (2022-03-15)
 
 #### Miscellaneous Chores
