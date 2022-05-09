@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.0](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/compare/v2.0.12...v2.1.0) (2022-05-09)
+
+#### Features
+
+* **prefabs:** add selection base component to facade ([e27fe7a](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/commit/e27fe7a7377d986b7252786c1103f1a4626d160b))
+  > The new Zinnia BaseGameObjectSelector when added to a GameObject will cause the GameObject to be selected when the mesh is clicked in the Unity scene view. This has been added to the facade to ensure the facade is selected when the mesh is clicked.
+
 ### [2.0.12](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/compare/v2.0.11...v2.0.12) (2022-05-09)
 
 #### Miscellaneous Chores
