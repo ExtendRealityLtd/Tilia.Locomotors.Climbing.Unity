@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.0](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/compare/v2.1.9...v2.2.0) (2022-06-02)
+
+#### Features
+
+* **Editor:** add climbable creator window ([7453396](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/commit/74533968403b3a80de21978e7cdf39b7159211e8))
+  > The Climbable Creator window allows easy creation of climbable objects by selecting a GameObject and using the Climbable Creator window to wrap the GameObejct in the Climbable prefab.
+
 ### [2.1.9](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/compare/v2.1.8...v2.1.9) (2022-05-28)
 
 #### Miscellaneous Chores
