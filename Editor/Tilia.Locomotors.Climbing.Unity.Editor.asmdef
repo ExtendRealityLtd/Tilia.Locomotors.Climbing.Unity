@@ -1,7 +1,9 @@
 {
     "name": "Tilia.Locomotors.Climbing.Unity.Editor",
     "references": [
-        "Zinnia.Editor"
+        "Zinnia.Editor",
+        "Tilia.Locomotors.Climbing.Unity.Runtime",
+        "Tilia.Interactions.Interactables.Unity.Runtime"
     ],
     "optionalUnityReferences": [],
     "includePlatforms": [
