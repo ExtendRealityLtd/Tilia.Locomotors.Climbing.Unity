@@ -1,5 +1,14 @@
 # Changelog
 
+### [2.2.9](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/compare/v2.2.8...v2.2.9) (2023-02-08)
+
+#### Miscellaneous Chores
+
+* **deps:** bump io.extendreality.tilia.trackers.pseudobody.unity ([9492829](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/commit/9492829b0a71da402d4a337996b05a43410a8f23))
+  > Bumps [io.extendreality.tilia.trackers.pseudobody.unity](https://github.com/ExtendRealityLtd/Tilia.Trackers.PseudoBody.Unity) from 2.1.5 to 2.1.6. - [Release notes](https://github.com/ExtendRealityLtd/Tilia.Trackers.PseudoBody.Unity/releases) - [Changelog](https://github.com/ExtendRealityLtd/Tilia.Trackers.PseudoBody.Unity/blob/master/CHANGELOG.md) - [Commits](https://github.com/ExtendRealityLtd/Tilia.Trackers.PseudoBody.Unity/compare/v2.1.5...v2.1.6)
+* **deps:** bump io.extendreality.zinnia.unity from 2.3.0 to 2.4.0 ([e704ef1](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/commit/e704ef1b0d7b25c1fbf150a1f58c5c9ff4089fa6))
+  > Bumps [io.extendreality.zinnia.unity](https://github.com/ExtendRealityLtd/Zinnia.Unity) from 2.3.0 to 2.4.0. - [Release notes](https://github.com/ExtendRealityLtd/Zinnia.Unity/releases) - [Changelog](https://github.com/ExtendRealityLtd/Zinnia.Unity/blob/master/CHANGELOG.md) - [Commits](https://github.com/ExtendRealityLtd/Zinnia.Unity/compare/v2.3.0...v2.4.0)
+
 ### [2.2.8](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/compare/v2.2.7...v2.2.8) (2022-07-05)
 
 #### Miscellaneous Chores
