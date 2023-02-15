@@ -1,5 +1,12 @@
 # Changelog
 
+### [2.2.16](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/compare/v2.2.15...v2.2.16) (2023-02-15)
+
+#### Miscellaneous Chores
+
+* **deps:** bump io.extendreality.tilia.interactions.interactables.unity ([8b3e53b](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/commit/8b3e53beff2c037298baa7d2b7db7ee36d0d6369))
+  > Bumps [io.extendreality.tilia.interactions.interactables.unity](https://github.com/ExtendRealityLtd/Tilia.Interactions.Interactables.Unity) from 2.8.1 to 2.8.2. - [Release notes](https://github.com/ExtendRealityLtd/Tilia.Interactions.Interactables.Unity/releases) - [Changelog](https://github.com/ExtendRealityLtd/Tilia.Interactions.Interactables.Unity/blob/master/CHANGELOG.md) - [Commits](https://github.com/ExtendRealityLtd/Tilia.Interactions.Interactables.Unity/compare/v2.8.1...v2.8.2)
+
 ### [2.2.15](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/compare/v2.2.14...v2.2.15) (2023-02-15)
 
 #### Miscellaneous Chores
