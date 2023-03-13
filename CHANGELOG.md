@@ -1,5 +1,12 @@
 # Changelog
 
+### [2.2.39](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/compare/v2.2.38...v2.2.39) (2023-03-13)
+
+#### Miscellaneous Chores
+
+* **deps:** bump io.extendreality.tilia.trackers.pseudobody.unity ([39c7a29](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/commit/39c7a29b56718ae0206c2bca804633a4bfb1eab1))
+  > Bumps [io.extendreality.tilia.trackers.pseudobody.unity](https://github.com/ExtendRealityLtd/Tilia.Trackers.PseudoBody.Unity) from 2.1.26 to 2.1.27. - [Release notes](https://github.com/ExtendRealityLtd/Tilia.Trackers.PseudoBody.Unity/releases) - [Changelog](https://github.com/ExtendRealityLtd/Tilia.Trackers.PseudoBody.Unity/blob/master/CHANGELOG.md) - [Commits](https://github.com/ExtendRealityLtd/Tilia.Trackers.PseudoBody.Unity/compare/v2.1.26...v2.1.27)
+
 ### [2.2.38](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/compare/v2.2.37...v2.2.38) (2023-03-13)
 
 #### Miscellaneous Chores
