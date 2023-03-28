@@ -190,7 +190,7 @@
         /// </summary>
         public virtual void ApplyVelocity()
         {
-            if (!isActiveAndEnabled || Interactors.NonSubscribableElements.Count > 0 || VelocityProxy.ProxySource == null)
+            if (!this.CheckIsActiveAndEnabled() || Interactors.NonSubscribableElements.Count > 0 || VelocityProxy.ProxySource == null)
             {
                 return;
             }
