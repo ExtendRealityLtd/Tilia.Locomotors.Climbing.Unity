@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.0](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/compare/v2.2.52...v2.3.0) (2023-03-28)
+
+#### Features
+
+* **Configurator:** replace isActiveAndEnabled ([b942068](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/commit/b942068818027ce6a710efaeeefaf4e9993a978a))
+  > The isActiveAndEnabled call has been replaced with CheckIsActiveAndEnabled as this is more consistent.
+
 ### [2.2.52](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/compare/v2.2.51...v2.2.52) (2023-03-28)
 
 #### Miscellaneous Chores
