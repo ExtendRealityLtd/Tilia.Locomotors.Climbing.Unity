@@ -1,5 +1,16 @@
 # Changelog
 
+### [2.3.38](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/compare/v2.3.37...v2.3.38) (2023-07-17)
+
+#### Bug Fixes
+
+* **Facade:** move deprecated setting to bottom of references ([7b14331](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/commit/7b1433147b87e8ffc5b0b3d989cb27e7bbfa4355))
+  > The PseudoBodyFacade property has been deprecated for some time and the reference to it has now been moved to the bottom of the references so it is clearly out of the way and not the main focus for the Facade settings.
+  > 
+  > The Climb Target property has been moved to the top, even though it doesn't need setting, this makes it clear that this is a customisable field.
+  > 
+  > All protected fields have also been made public so they can be set during runtime via code.
+
 ### [2.3.37](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/compare/v2.3.36...v2.3.37) (2023-07-11)
 
 #### Miscellaneous Chores
