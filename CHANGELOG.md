@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.4.0](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/compare/v2.3.38...v2.4.0) (2023-07-17)
+
+#### Features
+
+* **prefabs:** add moment process for internal processor ([0c5535e](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/commit/0c5535e4827861fd364a254283258369ad5f6f69))
+  > The Climbing prefab now has the internal MomentProcessor exposed as a MomentProcess on the top level of the prefab to make it easier to add the internal MomentProcessor to other scene processors.
+
 ### [2.3.38](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Climbing.Unity/compare/v2.3.37...v2.3.38) (2023-07-17)
 
 #### Bug Fixes
