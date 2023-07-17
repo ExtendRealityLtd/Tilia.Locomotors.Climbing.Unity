@@ -14,8 +14,67 @@
     /// </summary>
     public class ClimbingFacade : MonoBehaviour
     {
+        #region Climbing Settings
+        [Header("Climbing Settings")]
+        [Tooltip("The target to move when climbing.")]
+        [SerializeField]
+        private ClimbTarget target;
+        /// <summary>
+        /// The target to move when climbing.
+        /// </summary>
+        public ClimbTarget Target
+        {
+            get
+            {
+                return target;
+            }
+            set
+            {
+                target = value;
+                if (this.IsMemberChangeAllowed())
+                {
+                    OnAfterTargetChange();
+                }
+            }
+        }
+        #endregion
+
+        #region Events
+        /// <summary>
+        /// Emitted when a climb starts.
+        /// </summary>
+        [Header("Climbing Events")]
+        public UnityEvent ClimbStarted = new UnityEvent();
+        /// <summary>
+        /// Emitted when the climb stops.
+        /// </summary>
+        public UnityEvent ClimbStopped = new UnityEvent();
+        #endregion
+
+        #region Reference Settings
+        [Header("Reference Settings")]
+        [Tooltip("The linked ClimbingConfigurator.")]
+        [SerializeField]
+        [Restricted]
+        private ClimbingConfigurator configuration;
+        /// <summary>
+        /// The linked <see cref="ClimbingConfigurator"/>.
+        /// </summary>
+        public ClimbingConfigurator Configuration
+        {
+            get
+            {
+                return configuration;
+            }
+            set
+            {
+                configuration = value;
+            }
+        }
+        #endregion
+
 #pragma warning disable 0618
-        #region Control Settings
+        #region Deprecated Settings
         [Tooltip("The body representation to control.")]
         [SerializeField]
         [Restricted]
@@ -42,61 +101,6 @@
         }
         #endregion
 #pragma warning restore 0618
-
-        #region Events
-        /// <summary>
-        /// Emitted when a climb starts.
-        /// </summary>
-        [Header("Events")]
-        public UnityEvent ClimbStarted = new UnityEvent();
-        /// <summary>
-        /// Emitted when the climb stops.
-        /// </summary>
-        public UnityEvent ClimbStopped = new UnityEvent();
-        #endregion
-
-        #region Reference Settings
-        [Header("Reference Settings")]
-        [Tooltip("The target to move when climbing.")]
-        [SerializeField]
-        private ClimbTarget target;
-        /// <summary>
-        /// The target to move when climbing.
-        /// </summary>
-        public ClimbTarget Target
-        {
-            get
-            {
-                return target;
-            }
-            set
-            {
-                target = value;
-                if (this.IsMemberChangeAllowed())
-                {
-                    OnAfterTargetChange();
-                }
-            }
-        }
-        [Tooltip("The linked ClimbingConfigurator.")]
-        [SerializeField]
-        [Restricted]
-        private ClimbingConfigurator configuration;
-        /// <summary>
-        /// The linked <see cref="ClimbingConfigurator"/>.
-        /// </summary>
-        public ClimbingConfigurator Configuration
-        {
-            get
-            {
-                return configuration;
-            }
-            protected set
-            {
-                configuration = value;
-            }
-        }
-        #endregion
 
         /// <summary>
         /// The current source of the movement. The body will be moved in reverse direction in case this object moves.

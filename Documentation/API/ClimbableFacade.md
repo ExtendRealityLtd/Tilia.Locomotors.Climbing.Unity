@@ -52,7 +52,7 @@ The linked [ClimbableConfigurator].
 ##### Declaration
 
 ```
-public ClimbableConfigurator Configuration { get; protected set; }
+public ClimbableConfigurator Configuration { get; set; }
 ```
 
 #### ReleaseMultiplier

@@ -30,7 +30,7 @@
             {
                 return facade;
             }
-            protected set
+            set
             {
                 facade = value;
             }
@@ -52,7 +52,7 @@
             {
                 return interactors;
             }
-            protected set
+            set
             {
                 interactors = value;
             }
@@ -70,7 +70,7 @@
             {
                 return interactables;
             }
-            protected set
+            set
             {
                 interactables = value;
             }
@@ -88,7 +88,7 @@
             {
                 return velocityProxy;
             }
-            protected set
+            set
             {
                 velocityProxy = value;
             }
@@ -106,7 +106,7 @@
             {
                 return velocityEmitter;
             }
-            protected set
+            set
             {
                 velocityEmitter = value;
             }
@@ -124,7 +124,7 @@
             {
                 return velocityMultiplier;
             }
-            protected set
+            set
             {
                 velocityMultiplier = value;
             }
@@ -142,7 +142,7 @@
             {
                 return sourceDistanceComparator;
             }
-            protected set
+            set
             {
                 sourceDistanceComparator = value;
             }
@@ -160,7 +160,7 @@
             {
                 return offsetDistanceComparator;
             }
-            protected set
+            set
             {
                 offsetDistanceComparator = value;
             }
@@ -178,7 +178,7 @@
             {
                 return targetPositionProperty;
             }
-            protected set
+            set
             {
                 targetPositionProperty = value;
             }
