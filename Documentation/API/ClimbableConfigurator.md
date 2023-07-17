@@ -44,7 +44,7 @@ The public interface facade.
 ##### Declaration
 
 ```
-public ClimbableFacade Facade { get; protected set; }
+public ClimbableFacade Facade { get; set; }
 ```
 
 #### InteractableFacade
@@ -54,7 +54,7 @@ The [InteractableFacade] component acting as the interactable for climbing.
 ##### Declaration
 
 ```
-public InteractableFacade InteractableFacade { get; protected set; }
+public InteractableFacade InteractableFacade { get; set; }
 ```
 
 #### StartEventProxyEmitter
@@ -64,7 +64,7 @@ The GameObjectEventProxyEmitter component handling a started climb.
 ##### Declaration
 
 ```
-public GameObjectEventProxyEmitter StartEventProxyEmitter { get; protected set; }
+public GameObjectEventProxyEmitter StartEventProxyEmitter { get; set; }
 ```
 
 #### StopEventProxyEmitter
@@ -74,7 +74,7 @@ The GameObjectEventProxyEmitter component handling a stopped climb.
 ##### Declaration
 
 ```
-public GameObjectEventProxyEmitter StopEventProxyEmitter { get; protected set; }
+public GameObjectEventProxyEmitter StopEventProxyEmitter { get; set; }
 ```
 
 ### Methods

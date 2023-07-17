@@ -25,7 +25,7 @@
             {
                 return facade;
             }
-            protected set
+            set
             {
                 facade = value;
             }
@@ -47,7 +47,7 @@
             {
                 return interactableFacade;
             }
-            protected set
+            set
             {
                 interactableFacade = value;
             }
@@ -65,7 +65,7 @@
             {
                 return startEventProxyEmitter;
             }
-            protected set
+            set
             {
                 startEventProxyEmitter = value;
             }
@@ -83,7 +83,7 @@
             {
                 return stopEventProxyEmitter;
             }
-            protected set
+            set
             {
                 stopEventProxyEmitter = value;
             }

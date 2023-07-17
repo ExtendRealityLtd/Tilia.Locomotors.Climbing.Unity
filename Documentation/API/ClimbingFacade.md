@@ -82,7 +82,7 @@ The linked [ClimbingConfigurator].
 ##### Declaration
 
 ```
-public ClimbingConfigurator Configuration { get; protected set; }
+public ClimbingConfigurator Configuration { get; set; }
 ```
 
 #### CurrentInteractable

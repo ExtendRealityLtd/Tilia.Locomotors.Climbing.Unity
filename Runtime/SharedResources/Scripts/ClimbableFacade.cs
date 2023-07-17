@@ -61,7 +61,7 @@
             {
                 return configuration;
             }
-            protected set
+            set
             {
                 configuration = value;
             }

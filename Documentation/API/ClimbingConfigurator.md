@@ -55,7 +55,7 @@ The public interface facade.
 ##### Declaration
 
 ```
-public ClimbingFacade Facade { get; protected set; }
+public ClimbingFacade Facade { get; set; }
 ```
 
 #### Interactables
@@ -65,7 +65,7 @@ The objects defining the offsets of movement.
 ##### Declaration
 
 ```
-public GameObjectObservableList Interactables { get; protected set; }
+public GameObjectObservableList Interactables { get; set; }
 ```
 
 #### Interactors
@@ -75,7 +75,7 @@ The objects defining the sources of movement.
 ##### Declaration
 
 ```
-public GameObjectObservableList Interactors { get; protected set; }
+public GameObjectObservableList Interactors { get; set; }
 ```
 
 #### OffsetDistanceComparator
@@ -85,7 +85,7 @@ The ObjectDistanceComparator component for the offset.
 ##### Declaration
 
 ```
-public ObjectDistanceComparator OffsetDistanceComparator { get; protected set; }
+public ObjectDistanceComparator OffsetDistanceComparator { get; set; }
 ```
 
 #### SourceDistanceComparator
@@ -95,7 +95,7 @@ The ObjectDistanceComparator component for the source.
 ##### Declaration
 
 ```
-public ObjectDistanceComparator SourceDistanceComparator { get; protected set; }
+public ObjectDistanceComparator SourceDistanceComparator { get; set; }
 ```
 
 #### TargetPositionProperty
@@ -105,7 +105,7 @@ The TransformPositionMutator component for the offset.
 ##### Declaration
 
 ```
-public TransformPositionMutator TargetPositionProperty { get; protected set; }
+public TransformPositionMutator TargetPositionProperty { get; set; }
 ```
 
 #### VelocityEmitter
@@ -115,7 +115,7 @@ The Zinnia.Tracking.Velocity.VelocityEmitter component for emitting velocity dat
 ##### Declaration
 
 ```
-public VelocityEmitter VelocityEmitter { get; protected set; }
+public VelocityEmitter VelocityEmitter { get; set; }
 ```
 
 #### VelocityMultiplier
@@ -125,7 +125,7 @@ The Vector3Multiplier component for multiplying velocity data.
 ##### Declaration
 
 ```
-public Vector3Multiplier VelocityMultiplier { get; protected set; }
+public Vector3Multiplier VelocityMultiplier { get; set; }
 ```
 
 #### VelocityProxy
@@ -135,7 +135,7 @@ The ComponentTrackerProxy component for obtaining velocity data.
 ##### Declaration
 
 ```
-public ComponentTrackerProxy VelocityProxy { get; protected set; }
+public ComponentTrackerProxy VelocityProxy { get; set; }
 ```
 
 ### Methods
