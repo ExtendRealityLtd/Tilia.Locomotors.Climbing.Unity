@@ -28,7 +28,7 @@
         "url": "https://github.com/ExtendRealityLtd"
     },
     "dependencies": {
-        "io.extendreality.zinnia.unity": "2.15.0",
+        "io.extendreality.zinnia.unity": "2.16.0",
         "io.extendreality.tilia.trackers.pseudobody.unity": "2.3.1",
         "io.extendreality.tilia.interactions.interactables.unity": "2.16.6"
     },
